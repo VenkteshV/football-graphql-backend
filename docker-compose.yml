@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  gyan-graphql:
+    image: gyan.backend.service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - 5000:5000
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - GYAN_HOST=${GYAN_HOST}
+      - GYAN_PORT=${GYAN_PORT}
+      - GYAN_DB=${GYAN_DB}
+      - GYAN_USR=${GYAN_USR}
+      - GYAN_PWD=${GYAN_PWD}
+      - AUTH_TOKEN=${AUTH_TOKEN}
